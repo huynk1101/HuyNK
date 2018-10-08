@@ -1,0 +1,62 @@
+Prepare: Win 10 x64
+Link setting: https://facebook.github.io/react-native/docs/getting-started
+
+1. Download and setting Chocolatey(right click Command Prompt and select "Run as Administrator"):
+```
+Install with cmd.exe(right click Command Prompt and select "Run as Administrator")
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+Install with PowerShell.exe
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+NOTE: Please inspect https://chocolatey.org/install.ps1 prior to running any of these scripts to ensure safety. We already know it's safe, but you should verify the security and contents of any script from the internet you are not familiar with. All of these scripts download a remote PowerShell script and execute it on your machine.
+
+2. Download and setting Node, Python2, JDK
+```
+choco install -y nodejs.install python2 jdk8
+```
+
+3. Install React Native CLI
+```
+npm install -g react-native-cli
+```
+
+4. Android development environment
+- Download and install Android Studio: https://developer.android.com/studio/
+- Install the Android SDK(In Android Studio, Click File -> Settings -> Appearance & Behavior -> System Settings -> Android SDK):
+  + Tab SDK Platform, Install Android 8.0 (Oreo) 
+  + After installed, click Show Package Detailts, In Box the Android 8.0 (Oreo), Install
+    Android SDK Platform 26
+    Sources for Android 26
+    Google APIs Intel x86 Atom_64 System Image
+    Google Play Intel x86 Atom System Image
+  + Tab SDK Tools, Install 26.0.3
+- Configure the ANDROID_HOME environment variable
+  + Click right mouse This PC, choose Properties -> Advanced system settings -> Environment Variables -> System variable, edit Path:
+    Add New: C:\Users\{YOUR_USERNAME}\AppData\Local\Android\Sdk\platform-tools -> OK
+
+5. Creating a new application
+- Use the React Native command line interface to generate a new React Native project called "AwesomeProject":
+```
+react-native init AwesomeProject
+```
+
+6. Preparing the Android device
+- Using a virtual device
+  + Left Tab, choose icon AVD Manager -> Create Virtual Device 
+    -> Phone(Nexus 5X) -> Next -> Recommended(Oreo Android 8.0) -> Next -> Finish
+  +  At this point you should be able to click on the green triangle button next to your AVD to launch it, then proceed to the next step
+
+7. Running your React Native application
+- Run react-native run-android inside your React Native project folder:
+```
+cd AwesomeProject
+react-native run-android
+```
+
+8. Modifying your app
+Now that you have successfully run the app, let's modify it.
+- Open App.js in your text editor of choice and edit some lines.
+- Press the R key twice or select Reload from the Developer Menu (Ctrl + M) to see your changes!
+
+Note: In some cases, errors may occur during the installation process

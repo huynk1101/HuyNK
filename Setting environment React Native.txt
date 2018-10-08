@@ -48,11 +48,17 @@ react-native init AwesomeProject
   +  At this point you should be able to click on the green triangle button next to your AVD to launch it, then proceed to the next step
 
 7. Running your React Native application
+- In Project/android, create file name: local.properties
+```
+sdk.dir = C:\\Users\\{USER_NAME}\\AppData\\Local\\Android\\Sdk
+```
 - Run react-native run-android inside your React Native project folder:
 ```
 cd AwesomeProject
 react-native run-android
 ```
+
+
 
 8. Modifying your app
 Now that you have successfully run the app, let's modify it.
@@ -60,3 +66,11 @@ Now that you have successfully run the app, let's modify it.
 - Press the R key twice or select Reload from the Developer Menu (Ctrl + M) to see your changes!
 
 Note: In some cases, errors may occur during the installation process
+1. If BUNDLE is error, run command:
+```
+react-native start --reset-cache
+```
+then 
+```
+react-native run-android
+```

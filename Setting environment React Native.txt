@@ -67,6 +67,11 @@ Now that you have successfully run the app, let's modify it.
 
 Note: In some cases, errors may occur during the installation process
 1. If BUNDLE is error, run command:
+Remove node_modules, then run:
+```
+npm install
+```
+
 ```
 react-native start --reset-cache
 ```

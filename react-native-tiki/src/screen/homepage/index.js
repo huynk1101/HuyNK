@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, Image } from 'react-native';
 import styles from './styles';
+
+const iconSearch = require('../../../assets/images/ic_search_grey_24dp.png');
 
 export default class App extends Component {
   constructor(props) {
@@ -12,8 +14,10 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+
         <View style={styles.search}>
-          <TextInput style={styles.inputSearch } placeholder='Search' placeholderTextColor='#C7C7C7'></TextInput>
+          <Image source={iconSearch} style={styles.iconSearch} />
+          <TextInput style={styles.inputSearch} placeholder="Search" placeholderTextColor='#C7C7C7' />
         </View>
         <View style={styles.location}>
           <Text style={ styles.textLocaltion }> Giao hàng tới: Tòa nhà Sông Đà, đường Mễ Trì, Mỹ Đình, Nam Từ Liêm </Text>

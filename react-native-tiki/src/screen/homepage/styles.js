@@ -1,28 +1,34 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#189EFF',
 		width: '100%',
 		height: '100%'
 	},
+  
+  iconSearch: {
+    padding: 10,
+    margin: 5,
+    height: 25,
+    width: 25,
+    alignItems: 'center'
+  },
 
   search: {
-		backgroundColor: '#189EFF',
-		height: 60,
-		alignItems: 'center',
-		justifyContent: 'center'
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+    borderWidth: .5,
+    borderColor: '#000',
+    height: 40,
+    marginVertical: 10,
+    marginHorizontal: 60,
+		
 	},
 	
 	inputSearch: {
-		backgroundColor: '#FFFFFF',
-		width: '70%',
-		height: 40,
-		borderRadius: 3,
-		shadowColor: '#626262',
-		shadowOffset: {
-			width: 1,
-			height: 2,
-		}
+		flex: 1
 	},
 
 	location: {

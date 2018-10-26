@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
+  iconCart: {
+    justifyContent: 'flex-end'
+  },
+
   search: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -44,12 +48,13 @@ const styles = StyleSheet.create({
 	},
 
 	banner: {
-		backgroundColor: '#E4E4E4',
+		width: '100%',
 		height: 120
 	},
 
-	event: {
-		backgroundColor: '#F5F5F5',
+	banner_event: {
+		marginVertical: 10,
+		width: '100%',
 		height: 100
 	},
 

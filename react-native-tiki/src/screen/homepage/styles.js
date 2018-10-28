@@ -1,33 +1,43 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
-		backgroundColor: '#189EFF',
+		backgroundColor: '#F4F4F4',
 		width: '100%',
 		height: '100%'
 	},
   
+  header: {
+    backgroundColor: '#189EFF',
+    flexDirection: 'row'
+  },
+
   iconSearch: {
     padding: 10,
     margin: 5,
     height: 25,
     width: 25,
-    alignItems: 'center'
+  },
+
+  iconMenu: {
+    marginTop: 15,
+    marginLeft: 15
   },
 
   iconCart: {
-    justifyContent: 'flex-end'
+    marginTop: 15
   },
 
   search: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#189EFF',
     borderWidth: .5,
     borderColor: '#000',
     height: 40,
+    width: '70%',
     marginVertical: 10,
-    marginHorizontal: 60,
+    marginHorizontal: 15,
 		
 	},
 	
@@ -36,10 +46,12 @@ const styles = StyleSheet.create({
 	},
 
 	location: {
+    flexDirection: 'row',
 		backgroundColor: '#1D71AB',
 		height: 40,
-		alignItems: 'flex-start',
-		justifyContent: 'center'
+		alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingLeft: 10
 	},
 	
 	textLocaltion: {
@@ -59,12 +71,48 @@ const styles = StyleSheet.create({
 	},
 
 	listCategory: {
-		backgroundColor: '#FFFFFF'
-	},
+    flex: 1
+  },
+
+  itemCat: {
+    margin: 10,
+    alignItems: 'center',
+  },
+  
+  seeAllCategory: {
+    height: 30,
+    width: 100,
+    backgroundColor: '#189EFF',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
 
 	listService: {
 		backgroundColor: '#131C60',
-		height: 90
-	}
+    height: 150,
+    color: '#FFFFFF'
+  },
+  
+  register: {
+    height: 30,
+    width: 100,
+    backgroundColor: '#189EFF',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  login: {
+    height: 30,
+    width: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#C4011A'
+  },
+
+  authentication: {
+    height: 100,
+    marginTop: 10,
+  }
+  
 });
 export default styles;
